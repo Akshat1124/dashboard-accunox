@@ -1,0 +1,5 @@
+{
+  "name": "CNAPP Dashboard",
+  "description": "A dynamic and interactive dashboard for monitoring cloud security posture, workload protection, and registry scans. Users can customize their view by adding or removing widgets across different categories.",
+  "requestFramePermissions": []
+}
