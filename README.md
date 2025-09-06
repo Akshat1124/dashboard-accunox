@@ -90,27 +90,6 @@ Or using Yarn:
 yarn preview
 ```
 
-## Project Structure
-
-An example structure for the project:
-
-```
-dashboard-accunox/
-├── src/
-│   ├── components/      # Reusable React components
-│   ├── data/            # Static data, configuration files
-│   ├── store/           # State management (e.g., Redux, Zustand)
-│   ├── styles/          # Tailwind CSS and custom styles
-│   ├── App.tsx          # Main application component
-│   ├── index.tsx        # Entry point for React
-│   └── ...              # Other modules and utilities
-├── public/              # Static assets
-├── package.json         # Project metadata & scripts
-├── tsconfig.json        # TypeScript configuration
-├── tailwind.config.js   # Tailwind CSS configuration
-├── vite.config.ts       # Vite configuration
-└── README.md            # Project documentation
-```
 
 ## Scripts Overview
 
