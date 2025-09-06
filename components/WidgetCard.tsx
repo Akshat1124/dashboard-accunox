@@ -52,7 +52,7 @@ const WidgetCard: React.FC<WidgetCardProps> = ({ widget, isDragged, onDragStart,
       onDragStart={onDragStart}
       onDragOver={handleDragOver}
       onDrop={onDrop}
-      className={`bg-card rounded-lg shadow-sm border border-gray-200 flex flex-col min-h-[300px] transition-all duration-200 ${isDragged ? 'opacity-50 scale-95 shadow-lg' : 'opacity-100'}`}
+  className={`bg-card rounded-lg shadow-sm border border-gray-200 flex flex-col min-h-[300px] min-w-[340px] transition-all duration-200 ${isDragged ? 'opacity-50 scale-95 shadow-lg' : 'opacity-100'}`}
       >
       <header className="p-4 border-b border-gray-200 flex justify-between items-center cursor-move">
         <div className="flex items-center gap-2">

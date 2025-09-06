@@ -40,7 +40,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({ category, onDragStart
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
-        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-all duration-300 rounded-lg ${isDragOver ? 'bg-blue-50/50 ring-2 ring-accent-blue ring-offset-2' : ''}`}
+  className={`grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 transition-all duration-300 rounded-lg ${isDragOver ? 'bg-blue-50/50 ring-2 ring-accent-blue ring-offset-2' : ''}`}
       >
         {visibleWidgets.map((widget, index) => (
           <WidgetCard 

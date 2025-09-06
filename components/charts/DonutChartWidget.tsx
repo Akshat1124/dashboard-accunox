@@ -23,9 +23,11 @@ const DonutChartWidget: React.FC<DonutChartWidgetProps> = ({ data }) => {
             innerRadius={60}
             outerRadius={80}
             fill="#8884d8"
-            paddingAngle={1}
+            paddingAngle={3}
             dataKey="value"
-            stroke="none"
+            stroke="#fff"
+            strokeWidth={2}
+            isAnimationActive={true}
           >
             {metrics.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={entry.color} />

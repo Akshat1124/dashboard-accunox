@@ -6,6 +6,9 @@ import AddWidgetModal from './AddWidgetModal';
 import { useDashboardState } from '../store/dashboardContext';
 import { type Category } from '../types';
 
+import { useDashboardStore } from '../store/dashboardStore';
+
+// ...existing code...
 const DashboardPage: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');

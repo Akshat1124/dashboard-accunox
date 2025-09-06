@@ -1,6 +1,7 @@
 import React, { createContext, useReducer, useContext, useEffect, type Dispatch, type ReactNode } from 'react';
 import { type DashboardState, type DashboardAction, type Widget } from '../types';
 import { getInitialDashboardState } from '../data/dashboardData';
+import { ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
 const DashboardStateContext = createContext<DashboardState | undefined>(undefined);
 const DashboardDispatchContext = createContext<Dispatch<DashboardAction> | undefined>(undefined);
@@ -133,3 +134,38 @@ export const useDashboardDispatch = () => {
   }
   return context;
 };
+
+const data = [
+  { name: 'Passed', value: 7253, color: '#22c55e' },
+  { name: 'Warning', value: 880, color: '#fbbf24' },
+  { name: 'Failed', value: 1688, color: '#ef4444' },
+  { name: 'Not available', value: 36, color: '#6b7280' }
+];
+
+export function CloudAccountRiskAssessmentWidget() {
+  return (
+    <div style={{ width: '100%', height: '300px' }}>
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+          <Pie
+            data={data}
+            dataKey="value"
+            nameKey="name"
+            cx="50%"
+            cy="50%"
+            outerRadius="80%"
+            innerRadius="60%"
+            stroke="#fff"
+            strokeWidth={3}
+            isAnimationActive={false}
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={entry.color} />
+            ))}
+          </Pie>
+          <Legend />
+        </PieChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
